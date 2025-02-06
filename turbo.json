@@ -2,7 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
     "build": {
-      "outputs": ["frontend/dist/**", "backend/build/**"],
+      "outputs": ["dist/**", "build/**", "public/build/**"],
       "dependsOn": ["^build"]
     },
     "typecheck": {},
@@ -10,5 +10,6 @@
       "persistent": true,
       "cache": false
     }
-  }
+  },
+  "globalDependencies": ["**/*.css", "**/*.scss"]
 }

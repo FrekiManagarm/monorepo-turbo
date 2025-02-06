@@ -1,12 +1,12 @@
 {
-  "name": "@biume/backend",
-  "version": "0.0.1",
+  "name": "@monorepo/backend",
+  "version": "1.0.0",
   "description": "",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
-  "main": "dist/remix/remix.service.js",
-  "types": "dist/remix/remix.service.d.ts",
+  "main": "dist/src/main.js",
+  "types": "dist/src/main.d.ts",
   "scripts": {
     "dev": "run-p dev:compile dev:watch",
     "dev:compile": "tsc --build --watch",
@@ -20,17 +20,20 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@monorepo/frontend": "workspace:*",
     "@nestjs/common": "^11.0.1",
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
+    "@remix-run/dev": "1.1.3",
     "@remix-run/express": "^2.15.3",
+    "@remix-run/react": "1.19.3",
+    "@remix-run/serve": "^1.15.0",
     "drizzle-kit": "^0.30.4",
     "drizzle-orm": "^0.39.2",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
-    "@biume/frontend": "*",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.18.0",
     "@nestjs/cli": "^11.0.0",

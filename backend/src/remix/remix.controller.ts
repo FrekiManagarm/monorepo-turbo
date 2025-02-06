@@ -1,7 +1,7 @@
 import { All, Controller, Next, Req, Res } from '@nestjs/common';
 import { NextFunction, Request, Response } from 'express';
 import { createRequestHandler } from '@remix-run/express';
-import { getServerBuild } from '@biume/frontend';
+import { getServerBuild } from '@monorepo/frontend';
 import { RemixService } from './remix.service';
 
 @Controller()

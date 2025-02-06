@@ -1,6 +1,8 @@
+'use strict';
+
 const path = require('node:path');
 
-let devServer;
+let devServer = null;
 const SERVER_DIR = path.join(__dirname, 'build/server/index.js');
 const PUBLIC_DIR = path.join(__dirname, 'build/client');
 
@@ -12,19 +14,21 @@ module.exports.getServerBuild = async function getServerBuild() {
   if (process.env.NODE_ENV === 'production' || devServer === null) {
     return import(SERVER_DIR);
   }
+
   const ssrModule = await devServer.ssrLoadModule('virtual:remix/server-build');
   return ssrModule;
 };
 
 module.exports.startDevServer = async function startDevServer(app) {
   if (process.env.NODE_ENV === 'production') return;
+
   const vite = await import('vite');
   devServer = await vite.createServer({
-    server: { middlewareMode: 'true' },
+    server: { middlewareMode: true },
     root: __dirname,
+    appType: 'custom',
   });
 
   app.use(devServer.middlewares);
   return devServer;
-  // ...continues
 };
