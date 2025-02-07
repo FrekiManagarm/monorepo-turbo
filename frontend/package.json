@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
-    "@monorepo/backend": "workspace:*",
     "@radix-ui/react-accordion": "^1.2.3",
     "@radix-ui/react-alert-dialog": "^1.1.6",
     "@radix-ui/react-aspect-ratio": "^1.1.2",
@@ -69,6 +68,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@monorepo/backend": "*",
     "@remix-run/dev": "^2.15.3",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
