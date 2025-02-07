@@ -10,12 +10,12 @@
   "scripts": {
     "dev": "run-p dev:compile dev:watch",
     "dev:compile": "tsc --build --watch",
-    "dev:watch": "nodemon node dist/main.js",
+    "dev:watch": "nodemon node dist/src/main.js",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "prebuild": "rimraf dist tsconfig.tsbuildinfo",
     "build": "tsc --build",
     "prisma:prestart": "prisma generate",
-    "start": "node dist/main",
+    "start": "node dist/src/main.js",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
     "typecheck": "tsc --noEmit"
   },

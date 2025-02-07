@@ -1,11 +1,12 @@
 import { json, LoaderFunctionArgs } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
+import { Button } from "../components/ui/button";
 
 export const loader = async ({ context }: LoaderFunctionArgs) => {
   const remixService = context.remixService;
 
   return json({
-    message: remixService.getHello(),
+    message: remixService.getApi(),
   });
 };
 
@@ -14,7 +15,7 @@ export default function Api() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <h1>{data.message}</h1>
+      <Button>Click me {data.message}</Button>
     </div>
   );
 }

@@ -39,29 +39,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="h-full">
-        <div className="min-h-full">
-          <nav className="bg-gray-800">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div className="flex h-16 items-center justify-between">
-                <div className="flex items-center">
-                  <div className="flex-shrink-0">
-                    <h1 className="text-white text-2xl font-bold">Remix</h1>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-
-          <main>
-            <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-              <div className="px-4 py-6 sm:px-0">
-                <div className="rounded-lg border-4 border-dashed border-gray-200 p-4">
-                  {children}
-                </div>
-              </div>
-            </div>
-          </main>
-        </div>
+        {children}
         <ScrollRestoration />
         <Scripts />
       </body>
