@@ -6,13 +6,13 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-import type { RemixService } from "@monorepo/backend";
+import type { IRemixService } from "@monorepo/backend";
 
 import "./global.css";
 
 declare module "@remix-run/node" {
   interface AppLoadContext {
-    remixService: RemixService;
+    remixService: IRemixService;
   }
 }
 

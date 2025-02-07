@@ -135,6 +135,9 @@ importers:
 
   frontend:
     dependencies:
+      '@monorepo/backend':
+        specifier: workspace:*
+        version: link:../backend
       '@remix-run/node':
         specifier: ^2.0.0
         version: 2.15.3(typescript@5.7.3)
