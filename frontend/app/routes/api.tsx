@@ -1,9 +1,11 @@
-import { json } from "@remix-run/node";
+import { json, LoaderFunctionArgs } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 
-export const loader = async () => {
+export const loader = async ({ context }: LoaderFunctionArgs) => {
+  const remixService = context.remixService;
+
   return json({
-    message: "Salut ça va ? t ki ? pk t la ?",
+    message: remixService.getHello(),
   });
 };
 
