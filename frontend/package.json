@@ -68,7 +68,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@monorepo/backend": "*",
+    "@monorepo/backend": "workspace:*",
     "@remix-run/dev": "^2.15.3",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
